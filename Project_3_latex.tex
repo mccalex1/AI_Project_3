@@ -1,0 +1,16 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+
+\title{Image Classification}
+\author{Alex McCaslin}
+\date{May 15 2016}
+
+
+\begin{document}
+\maketitle
+For the image classification program I used a few libraries including sklearn, pylab, PIL, scipy, and numpy. I started out by loading the files using sklearn's image loading library and reading in each file based upon whether or not it was a jpg. I then converted each of the jpgs to numpy arrays, and reshaping them into tuples so they would be two dimensional arrays. After appending all of them to a list I reshaped the numpy array so I would be able to use the data set as a classifier. I converted the image sent in by the user to the same numpy array and threw it in the svm with the dataset and the list of filenames.
+	
+	In order to display accuracy I had to create a way to use half the dataset as training data and half the dataset as a test set. After figuring out the percentages, I found there was a 97 percent average accuracy rate across all the testing sets. I found that the dollar sign had 98 percent, hash had 98 percent, hat had 97 percent, heart had 100 percent, and smiley face had 93 percent with recalls of 1.00, 1.00, 1.00, .89, and .97 respectively.
+
+\end{document}
